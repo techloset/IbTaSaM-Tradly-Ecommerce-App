@@ -24,6 +24,19 @@ import SCREENS from '../library/SCREENS';
 import CommonHeader from '../(components)/CommonHeader';
 
 const AddProductScreen = ({navigation}) => {
+  const productFields = [
+    {label: 'Product Name', placeholder: 'Broccoli'},
+    {label: 'Category Product', placeholder: 'Vegetables'},
+  ];
+
+  const renderProductFields = () => {
+    return productFields.map((field, index) => (
+      <View key={index}>
+        <Text style={styles.inputLabel}>{field.label}</Text>
+        <ProductInput placeholder={field.placeholder} />
+      </View>
+    ));
+  };
   return (
     <SafeAreaView style={styles.super_Container}>
       <StatusBar translucent backgroundColor={'rgba(0,0,0,0)'} />
@@ -50,14 +63,7 @@ const AddProductScreen = ({navigation}) => {
         </View>
       </View>
       <ScrollView contentContainerStyle={styles.container_2}>
-        <View>
-          <Text style={styles.inputLabel}>Product Name</Text>
-          <ProductInput placeholder={'Brocolli'} />
-        </View>
-        <View>
-          <Text style={styles.inputLabel}>Category Product</Text>
-          <ProductInput placeholder={'Vegetables'} />
-        </View>
+        {renderProductFields()}
         <View style={styles.inputsRow}>
           <View>
             <Text style={styles.inputLabel}>Price</Text>

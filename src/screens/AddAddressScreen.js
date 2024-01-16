@@ -9,8 +9,24 @@ const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 import LocationIcon from '../assets/images/icons/currentLocation.svg';
 import AddInput from '../(components)/AddInput';
 import SCREENS from '../library/SCREENS';
-
 const AddAddressScreen = ({navigation}) => {
+  const inputFields = [
+    {label: 'Name', placeholder: 'Tradly Team'},
+    {label: 'Phone', placeholder: '+621234567890'},
+    {label: 'Street address', placeholder: 'Kualalumpur Malaysia'},
+    {label: 'City', placeholder: 'Kualalumpur'},
+    {label: 'State', placeholder: 'Malaysia'},
+    {label: 'Zip Code', placeholder: '75119'},
+  ];
+
+  const renderInputFields = () => {
+    return inputFields.map((field, index) => (
+      <View key={index}>
+        <Text style={styles.inputLabel}>{field.label}</Text>
+        <AddInput placeholder={field.placeholder} />
+      </View>
+    ));
+  };
   return (
     <SafeAreaView style={styles.super_Container}>
       <StatusBar translucent backgroundColor={'rgba(0,0,0,0)'} />
@@ -19,33 +35,7 @@ const AddAddressScreen = ({navigation}) => {
         <LocationIcon />
         <Text style={styles.locationText}>Use current location</Text>
       </View>
-      {/* inputs */}
-      <View style={styles.container_2}>
-        <View>
-          <Text style={styles.inputLabel}>Name</Text>
-          <AddInput placeholder={'Tradly Team'} />
-        </View>
-        <View>
-          <Text style={styles.inputLabel}>Phone</Text>
-          <AddInput placeholder={'+621234567890'} />
-        </View>
-        <View>
-          <Text style={styles.inputLabel}>Street address</Text>
-          <AddInput placeholder={'Kualalumpur Malaysia'} />
-        </View>
-        <View>
-          <Text style={styles.inputLabel}>City</Text>
-          <AddInput placeholder={'Kualalumpur'} />
-        </View>
-        <View>
-          <Text style={styles.inputLabel}>State</Text>
-          <AddInput placeholder={'Malaysia'} />
-        </View>
-        <View>
-          <Text style={styles.inputLabel}>Zip Code</Text>
-          <AddInput placeholder={'75119'} />
-        </View>
-      </View>
+      <View style={styles.container_2}>{renderInputFields()}</View>
       <View style={styles.bottom_Bar}>
         <GreenBtn
           text={'Save'}
