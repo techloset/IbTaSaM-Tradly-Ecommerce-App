@@ -18,8 +18,8 @@ const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 import CardRadio from '../(components)/CardRadio';
 import SeeAllBtnGreen from '../(components)/SeeAllBtnGreen';
-import Paginator_Dots from '../(components)/Paginator_Dots';
-import SCREENS from '../library/SCREENS';
+import PaginatorDots from '../(components)/PaginatorDots';
+import SCREENS from '../navigation/Screens';
 
 const PaymentOptionScreen = ({navigation}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -37,10 +37,10 @@ const PaymentOptionScreen = ({navigation}) => {
   };
   return (
     <>
-      <SafeAreaView style={styles.super_Container}>
+      <SafeAreaView style={styles.superContainer}>
         <StatusBar translucent backgroundColor={'rgba(0,0,0,0)'} />
         <CommonHeader title={'Payment Option'} />
-        <View style={styles.container_1}>
+        <View style={styles.container1}>
           <FlatList
             data={addCard}
             renderItem={({item, i}) => (
@@ -56,7 +56,7 @@ const PaymentOptionScreen = ({navigation}) => {
             showsHorizontalScrollIndicator={false}
             onMomentumScrollEnd={handleMomentumScrollEnd}
           />
-          <Paginator_Dots data={addCard} currentIndex={currentIndex} />
+          <PaginatorDots data={addCard} currentIndex={currentIndex} />
         </View>
         <ScrollView>
           <CardRadio />
@@ -69,25 +69,25 @@ const PaymentOptionScreen = ({navigation}) => {
             </View>
             <SeeAllBtnGreen text={'Change'} />
           </View>
-          <View style={styles.container_3}>
+          <View style={styles.container3}>
             <Text style={TEXT.title}>Price Details</Text>
             <View style={styles.options}>
               <View style={styles.optionLeft}>
-                <Text style={styles.container_3_Text}>Price ( 1 item)</Text>
-                <Text style={styles.container_3_Text}>Delivery Fee</Text>
+                <Text style={styles.containerText}>Price ( 1 item)</Text>
+                <Text style={styles.containerText}>Delivery Fee</Text>
               </View>
               <View style={styles.optionRight}>
-                <Text style={styles.container_3_Text}>Price ( 1 item)</Text>
-                <Text style={styles.container_3_Text}>Delivery Fee</Text>
+                <Text style={styles.containerText}>Price ( 1 item)</Text>
+                <Text style={styles.containerText}>Delivery Fee</Text>
               </View>
             </View>
-            <View style={styles.container_3_Bottom}>
+            <View style={styles.containerBottom}>
               <Text style={TEXT.title}>Total Amount</Text>
               <Text style={TEXT.title}>$ 25</Text>
             </View>
           </View>
         </ScrollView>
-        <View style={styles.bottom_Bar}>
+        <View style={styles.bottomBar}>
           <View style={{opacity: 0.4}}>
             <GreenBtn text={'Checkout'} />
           </View>
@@ -100,18 +100,18 @@ const PaymentOptionScreen = ({navigation}) => {
 export default PaymentOptionScreen;
 
 const styles = StyleSheet.create({
-  super_Container: {
+  superContainer: {
     flex: 1,
     backgroundColor: COLOR.bg,
   },
-  container_3_Bottom: {
+  containerBottom: {
     flexDirection: 'row',
     borderTopColor: 'rgba(0, 0, 0, 0.10)',
     borderTopWidth: widthPixel(1),
     justifyContent: 'space-between',
     alignItems: 'center',
   },
-  container_3_Text: {
+  containerText: {
     fontFamily: FONT_FAMILY.montserratMedium,
     fontSize: fontPixel(14),
     color: COLOR.neutral,
@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     marginBottom: pixelSizeVertical(24),
   },
-  container_3: {
+  container3: {
     height: widthPixel(183),
     width: '100%',
     backgroundColor: COLOR.white,
@@ -156,7 +156,7 @@ const styles = StyleSheet.create({
   cardImgContainer: {
     paddingHorizontal: pixelSizeVertical(68),
   },
-  container_1: {
+  container1: {
     height: widthPixel(241),
     width: '100%',
     backgroundColor: COLOR.white,
@@ -166,7 +166,7 @@ const styles = StyleSheet.create({
     marginBottom: pixelSizeVertical(7),
     paddingVertical: pixelSizeVertical(26),
   },
-  bottom_Bar: {
+  bottomBar: {
     height: widthPixel(80),
     width: '100%',
     justifyContent: 'center',

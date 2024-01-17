@@ -13,17 +13,17 @@ import GreenBtn from '../(components)/GreenBtn';
 import React from 'react';
 
 import ChevDownIcon from '../assets/images/icons/chevDown.svg';
-import SCREENS from '../library/SCREENS';
+import SCREENS from '../navigation/Screens';
 import SeeAllBtnGreen from '../(components)/SeeAllBtnGreen';
 
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 const CheckoutScreen = ({navigation}) => {
   return (
-    <SafeAreaView style={styles.super_Container}>
+    <SafeAreaView style={styles.superContainer}>
       <StatusBar translucent backgroundColor={'rgba(0,0,0,0)'} />
       <CommonHeader title={'My Cart'} />
-      <View style={styles.container_1}>
+      <View style={styles.container1}>
         <View style={styles.addressContainer}>
           <View style={styles.address}>
             <Text style={TEXT.cardText}>Deliver to Tradly Team, 75119</Text>
@@ -34,7 +34,7 @@ const CheckoutScreen = ({navigation}) => {
           <SeeAllBtnGreen text={'Change'} />
         </View>
       </View>
-      <View style={styles.container_2}>
+      <View style={styles.container2}>
         <View style={styles.itemContainer}>
           <Image
             style={styles.itemimage}
@@ -65,24 +65,24 @@ const CheckoutScreen = ({navigation}) => {
           <Text style={TEXT.faded}>Remove</Text>
         </View>
       </View>
-      <View style={styles.container_3}>
+      <View style={styles.container3}>
         <Text style={TEXT.title}>Price Details</Text>
         <View style={styles.options}>
           <View style={styles.optionLeft}>
-            <Text style={styles.container_3_Text}>Price ( 1 item)</Text>
-            <Text style={styles.container_3_Text}>Delivery Fee</Text>
+            <Text style={styles.container3Text}>Price ( 1 item)</Text>
+            <Text style={styles.container3Text}>Delivery Fee</Text>
           </View>
           <View style={styles.optionRight}>
-            <Text style={styles.container_3_Text}>Price ( 1 item)</Text>
-            <Text style={styles.container_3_Text}>Delivery Fee</Text>
+            <Text style={styles.container3Text}>Price ( 1 item)</Text>
+            <Text style={styles.container3Text}>Delivery Fee</Text>
           </View>
         </View>
-        <View style={styles.container_3_Bottom}>
+        <View style={styles.container3Bottom}>
           <Text style={TEXT.title}>Total Amount</Text>
           <Text style={TEXT.title}>$ 25</Text>
         </View>
       </View>
-      <View style={styles.bottom_Bar}>
+      <View style={styles.bottomBar}>
         <GreenBtn
           text={'Coninue to Payment'}
           handleFunc={() => navigation.navigate(SCREENS.PAYMENT)}
@@ -95,18 +95,18 @@ const CheckoutScreen = ({navigation}) => {
 export default CheckoutScreen;
 
 const styles = StyleSheet.create({
-  super_Container: {
+  superContainer: {
     flex: 1,
     backgroundColor: COLOR.bg,
   },
-  container_3_Bottom: {
+  container3Bottom: {
     flexDirection: 'row',
     borderTopColor: 'rgba(0, 0, 0, 0.10)',
     borderTopWidth: widthPixel(1),
     justifyContent: 'space-between',
     alignItems: 'center',
   },
-  container_3_Text: {
+  container3Text: {
     fontFamily: FONT_FAMILY.montserratMedium,
     fontSize: fontPixel(14),
     color: COLOR.neutral,
@@ -125,7 +125,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     marginBottom: pixelSizeVertical(24),
   },
-  container_3: {
+  container3: {
     height: widthPixel(183),
     width: '100%',
     backgroundColor: COLOR.white,
@@ -179,7 +179,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: pixelSizeVertical(15),
   },
-  container_2: {
+  container2: {
     height: widthPixel(183),
     width: '100%',
     backgroundColor: COLOR.white,
@@ -190,7 +190,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     gap: pixelSizeVertical(90),
   },
-  container_1: {
+  container1: {
     height: widthPixel(52),
     width: '100%',
     backgroundColor: COLOR.white,
@@ -198,7 +198,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  bottom_Bar: {
+  bottomBar: {
     height: widthPixel(80),
     width: '100%',
     justifyContent: 'center',

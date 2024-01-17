@@ -8,7 +8,7 @@ import HeartIcon from '../assets/images/icons/heart.svg';
 import CartIcon from '../assets/images/icons/cart.svg';
 import SearchInput from './SearchInput';
 import {useNavigation} from '@react-navigation/native';
-import SCREENS from '../library/SCREENS';
+import SCREENS from '../navigation/Screens';
 
 const {pixelSizeVertical} = ratio;
 

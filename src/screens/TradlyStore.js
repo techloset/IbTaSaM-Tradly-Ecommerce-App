@@ -19,7 +19,7 @@ import CrossIcon from '../assets/images/icons/cross.svg';
 
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 import {useNavigation} from '@react-navigation/native';
-import SCREENS from '../library/SCREENS';
+import SCREENS from '../navigation/Screens';
 
 const TradlyStore = () => {
   const navigation = useNavigation();
@@ -33,7 +33,7 @@ const TradlyStore = () => {
   ];
   const crossOptions = [{text: 'Groceries'}, {text: 'Vegetables'}];
   return (
-    <SafeAreaView style={styles.super_Container}>
+    <SafeAreaView style={styles.superContainer}>
       <View style={styles.headerContainer}>
         <View style={styles.headerTextContainer}>
           <TouchableOpacity onPress={() => navigation.goBack()}>
@@ -85,7 +85,7 @@ const TradlyStore = () => {
           })}
         </View>
       </View>
-      <View style={styles.container_1}>
+      <View style={styles.container1}>
         <View style={styles.follower}>
           <Text style={styles.title}>Total Followers</Text>
           <Text style={styles.title}>0</Text>
@@ -95,7 +95,7 @@ const TradlyStore = () => {
           <Text style={styles.title}>0</Text>
         </View>
       </View>
-      <View style={styles.container_2}>
+      <View style={styles.container2}>
         <ScrollView
           horizontal
           showsHorizontalScrollIndicator={false}
@@ -114,7 +114,7 @@ const TradlyStore = () => {
             );
           })}
         </ScrollView>
-        <ScrollView contentContainerStyle={styles.products_Cards}>
+        <ScrollView contentContainerStyle={styles.alphaLogoContainer}>
           <ProductCard data={BrowseScreenData.slice(0, 4)} />
         </ScrollView>
       </View>
@@ -124,7 +124,7 @@ const TradlyStore = () => {
 export default TradlyStore;
 
 const styles = StyleSheet.create({
-  super_Container: {
+  superContainer: {
     flex: 1,
     backgroundColor: COLOR.bg,
   },
@@ -158,7 +158,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLOR.green,
     paddingTop: pixelSizeVertical(40),
   },
-  products_Cards: {
+  alphaLogoContainer: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     gap: pixelSizeVertical(10),
@@ -198,7 +198,7 @@ const styles = StyleSheet.create({
     gap: pixelSizeVertical(12),
     paddingBottom: pixelSizeVertical(20),
   },
-  container_1: {
+  container1: {
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: pixelSizeVertical(55),

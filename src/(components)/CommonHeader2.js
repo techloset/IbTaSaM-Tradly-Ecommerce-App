@@ -5,7 +5,7 @@ import {COLOR, TEXT} from '../styles/GlobalStyles';
 import {useNavigation} from '@react-navigation/native';
 import HeartIcon from '../assets/images/icons/heart.svg';
 import CartIcon from '../assets/images/icons/cart.svg';
-import SCREENS from '../library/SCREENS';
+import SCREENS from '../navigation/Screens';
 const {pixelSizeVertical} = ratio;
 const CommonHeader2 = ({title}) => {
   const navigation = useNavigation();

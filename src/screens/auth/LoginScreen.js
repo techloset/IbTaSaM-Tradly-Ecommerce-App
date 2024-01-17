@@ -10,7 +10,7 @@ import {COLOR, FONT_FAMILY} from '../../styles/GlobalStyles';
 import ratio from '../../styles/ratio';
 import Input from '../../(components)/Input';
 import WhiteBtn from '../../(components)/WhiteBtn';
-import SCREENS from '../../library/SCREENS';
+import SCREENS from '../../navigation/Screens';
 
 const {fontPixel, pixelSizeVertical} = ratio;
 

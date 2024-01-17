@@ -12,7 +12,7 @@ import ratio from '../styles/ratio';
 import Slides from '../library/Slides';
 import OnBoardingItem from '../(components)/OnBoardingItem';
 
-import SCREENS from '../library/SCREENS';
+import SCREENS from '../navigation/Screens';
 import GreenBtn from '../(components)/GreenBtn';
 import {COLOR} from '../styles/GlobalStyles';
 const {pixelSizeVertical, widthPixel, SCREEN_WIDTH} = ratio;

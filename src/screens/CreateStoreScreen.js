@@ -9,7 +9,7 @@ import GreenBtn from '../(components)/GreenBtn';
 import OptionWithCross from '../(components)/OptionWithCross';
 import ProductInput from '../(components)/ProductInput';
 import CreateStoreInputFieldsData from '../library/CreateStoreInputFieldsData';
-import SCREENS from '../library/SCREENS';
+import SCREENS from '../navigation/Screens';
 
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
@@ -17,7 +17,7 @@ const CreateStoreScreen = ({navigation}) => {
   const inputsData = CreateStoreInputFieldsData;
 
   return (
-    <SafeAreaView style={styles.super_Container}>
+    <SafeAreaView style={styles.superContainer}>
       <CommonHeader title={'My Store'} />
       <View style={styles.container}>
         <StoreMainIcon width={pixelSizeVertical(152)} />
@@ -39,7 +39,7 @@ const CreateStoreScreen = ({navigation}) => {
           <OptionWithCross text={'Groceries'} />
         </View>
       </ScrollView>
-      <View style={styles.bottom_Bar}>
+      <View style={styles.bottomBar}>
         <GreenBtn
           text={'Create'}
           handleFunc={() =>
@@ -54,7 +54,7 @@ const CreateStoreScreen = ({navigation}) => {
 export default CreateStoreScreen;
 
 const styles = StyleSheet.create({
-  super_Container: {
+  superContainer: {
     flex: 1,
     backgroundColor: COLOR.bg,
   },
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     gap: pixelSizeVertical(25),
     paddingBottom: pixelSizeVertical(17),
   },
-  bottom_Bar: {
+  bottomBar: {
     height: widthPixel(80),
     width: '100%',
     justifyContent: 'center',

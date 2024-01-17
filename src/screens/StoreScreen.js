@@ -6,13 +6,13 @@ import React from 'react';
 import StoreMainIcon from '../assets/images/icons/storeMain.svg';
 import CommonHeader2 from '../(components)/CommonHeader2';
 import StoreBtn from '../(components)/StoreBtn';
-import SCREENS from '../library/SCREENS';
+import SCREENS from '../navigation/Screens';
 
 const {pixelSizeVertical} = ratio;
 
 const StoreScreen = ({navigation}) => {
   return (
-    <SafeAreaView style={styles.super_Container}>
+    <SafeAreaView style={styles.superContainer}>
       <CommonHeader2 title={'My Store'} />
       <View style={styles.container}>
         <StoreMainIcon width={pixelSizeVertical(152)} />
@@ -31,7 +31,7 @@ const StoreScreen = ({navigation}) => {
 export default StoreScreen;
 
 const styles = StyleSheet.create({
-  super_Container: {
+  superContainer: {
     flex: 1,
     backgroundColor: COLOR.bg,
   },

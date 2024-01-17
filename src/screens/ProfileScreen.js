@@ -16,13 +16,12 @@ const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 import ProfileScreenData from '../library/ProfileScreenData';
 
 const ProfileScreen = () => {
-  const optionsData = ProfileScreenData;
   return (
-    <SafeAreaView style={styles.super_Container}>
+    <SafeAreaView style={styles.superContainer}>
       <CommonHeader2 title={'Profile'} />
       <View style={styles.container}>
-        <View style={styles.profile_Container}>
-          <View style={styles.alphaLogo_Container}>
+        <View style={styles.profileContainer}>
+          <View style={styles.alphaLogoContainer}>
             <View style={styles.alphaLogo}>
               <Text style={styles.alphaLogoText}>T</Text>
             </View>
@@ -37,8 +36,8 @@ const ProfileScreen = () => {
           </View>
         </View>
       </View>
-      <View style={styles.container_1}>
-        {optionsData.map((item, index) => {
+      <View style={styles.container1}>
+        {ProfileScreenData.map((item, index) => {
           return (
             <TouchableOpacity
               onPress={item.nav}
@@ -50,7 +49,7 @@ const ProfileScreen = () => {
                     ? [TEXT.cardText, {color: COLOR.green}]
                     : TEXT.cardText
                 }>
-                {item.text}
+                {item}
               </Text>
             </TouchableOpacity>
           );
@@ -63,7 +62,7 @@ const ProfileScreen = () => {
 export default ProfileScreen;
 
 const styles = StyleSheet.create({
-  super_Container: {
+  superContainer: {
     flex: 1,
     backgroundColor: COLOR.bg,
   },
@@ -86,7 +85,7 @@ const styles = StyleSheet.create({
   text_Container: {
     gap: pixelSizeVertical(5),
   },
-  container_1: {
+  container1: {
     paddingTop: pixelSizeVertical(15),
     height: widthPixel(266),
     width: widthPixel(340),
@@ -111,11 +110,11 @@ const styles = StyleSheet.create({
     bottom: pixelSizeVertical(11),
     right: pixelSizeVertical(-2),
   },
-  alphaLogo_Container: {
+  alphaLogoContainer: {
     position: 'relative',
     alignSelf: 'flex-start',
   },
-  profile_Container: {
+  profileContainer: {
     flexDirection: 'row',
     paddingHorizontal: pixelSizeVertical(26),
     alignItems: 'center',

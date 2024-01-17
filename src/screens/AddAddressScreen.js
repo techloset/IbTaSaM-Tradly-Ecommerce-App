@@ -8,7 +8,7 @@ const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 import LocationIcon from '../assets/images/icons/currentLocation.svg';
 import AddInput from '../(components)/AddInput';
-import SCREENS from '../library/SCREENS';
+import SCREENS from '../navigation/Screens';
 const AddAddressScreen = ({navigation}) => {
   const inputFields = [
     {label: 'Name', placeholder: 'Tradly Team'},
@@ -28,15 +28,15 @@ const AddAddressScreen = ({navigation}) => {
     ));
   };
   return (
-    <SafeAreaView style={styles.super_Container}>
+    <SafeAreaView style={styles.superContainer}>
       <StatusBar translucent backgroundColor={'rgba(0,0,0,0)'} />
       <CommonHeader title={'Add a new Address'} />
-      <View style={styles.container_1}>
+      <View style={styles.container1}>
         <LocationIcon />
         <Text style={styles.locationText}>Use current location</Text>
       </View>
-      <View style={styles.container_2}>{renderInputFields()}</View>
-      <View style={styles.bottom_Bar}>
+      <View style={styles.container2}>{renderInputFields()}</View>
+      <View style={styles.bottomBar}>
         <GreenBtn
           text={'Save'}
           handleFunc={() => navigation.navigate(SCREENS.CHECKOUT)}
@@ -49,7 +49,7 @@ const AddAddressScreen = ({navigation}) => {
 export default AddAddressScreen;
 
 const styles = StyleSheet.create({
-  super_Container: {
+  superContainer: {
     flex: 1,
     backgroundColor: COLOR.bg,
   },
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
     lineHeight: fontPixel(16),
     opacity: 0.5,
   },
-  container_2: {
+  container2: {
     paddingHorizontal: pixelSizeVertical(23.5),
     marginTop: pixelSizeVertical(36),
     gap: pixelSizeVertical(16),
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
     color: COLOR.blue,
     lineHeight: fontPixel(24),
   },
-  container_1: {
+  container1: {
     height: widthPixel(65),
     width: '100%',
     backgroundColor: COLOR.white,
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     gap: pixelSizeVertical(8),
   },
-  bottom_Bar: {
+  bottomBar: {
     height: widthPixel(80),
     width: '100%',
     justifyContent: 'center',

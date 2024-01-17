@@ -14,21 +14,21 @@ import GreenBtn from '../(components)/GreenBtn';
 import React from 'react';
 
 import ChevDownIcon from '../assets/images/icons/chevDown.svg';
-import SCREENS from '../library/SCREENS';
+import SCREENS from '../navigation/Screens';
 
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 const CartScreen = ({navigation}) => {
   return (
-    <SafeAreaView style={styles.super_Container}>
+    <SafeAreaView style={styles.superContainer}>
       <StatusBar translucent backgroundColor={'rgba(0,0,0,0)'} />
       <CommonHeader title={'My Cart'} />
       <TouchableOpacity
-        style={styles.container_1}
+        style={styles.container1}
         onPress={() => navigation.navigate(SCREENS.ADD_ADDRESS)}>
         <Text style={TEXT.cardText}>+ Add New Address</Text>
       </TouchableOpacity>
-      <View style={styles.container_2}>
+      <View style={styles.container2}>
         <View style={styles.itemContainer}>
           <Image
             style={styles.itemimage}
@@ -63,20 +63,20 @@ const CartScreen = ({navigation}) => {
         <Text style={TEXT.title}>Price Details</Text>
         <View style={styles.options}>
           <View style={styles.optionLeft}>
-            <Text style={styles.container_3_Text}>Price ( 1 item)</Text>
-            <Text style={styles.container_3_Text}>Delivery Fee</Text>
+            <Text style={styles.container3Text}>Price ( 1 item)</Text>
+            <Text style={styles.container3Text}>Delivery Fee</Text>
           </View>
           <View style={styles.optionRight}>
-            <Text style={styles.container_3_Text}>Price ( 1 item)</Text>
-            <Text style={styles.container_3_Text}>Delivery Fee</Text>
+            <Text style={styles.container3Text}>Price ( 1 item)</Text>
+            <Text style={styles.container3Text}>Delivery Fee</Text>
           </View>
         </View>
-        <View style={styles.container_3_Bottom}>
+        <View style={styles.container3Bottom}>
           <Text style={TEXT.title}>Total Amount</Text>
           <Text style={TEXT.title}>$ 25</Text>
         </View>
       </View>
-      <View style={[styles.bottom_Bar, {opacity: 0.4}]}>
+      <View style={[styles.bottomBar, {opacity: 0.4}]}>
         <GreenBtn text={'Coninue to Payment'} />
       </View>
     </SafeAreaView>
@@ -86,18 +86,18 @@ const CartScreen = ({navigation}) => {
 export default CartScreen;
 
 const styles = StyleSheet.create({
-  super_Container: {
+  superContainer: {
     flex: 1,
     backgroundColor: COLOR.bg,
   },
-  container_3_Bottom: {
+  container3Bottom: {
     flexDirection: 'row',
     borderTopColor: 'rgba(0, 0, 0, 0.10)',
     borderTopWidth: widthPixel(1),
     justifyContent: 'space-between',
     alignItems: 'center',
   },
-  container_3_Text: {
+  container3Text: {
     fontFamily: FONT_FAMILY.montserratMedium,
     fontSize: fontPixel(14),
     color: COLOR.neutral,
@@ -170,7 +170,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: pixelSizeVertical(15),
   },
-  container_2: {
+  container2: {
     height: widthPixel(183),
     width: '100%',
     backgroundColor: COLOR.white,
@@ -181,7 +181,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     gap: pixelSizeVertical(49),
   },
-  container_1: {
+  container1: {
     height: widthPixel(52),
     width: '100%',
     backgroundColor: COLOR.white,
@@ -189,7 +189,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  bottom_Bar: {
+  bottomBar: {
     height: widthPixel(80),
     width: '100%',
     justifyContent: 'center',

@@ -12,7 +12,7 @@ import {
   import TLogo from '../assets/images/icons/tLogo.svg';
   import EditIcon from '../assets/images/icons/Edit.svg';
   import DeleteIcon from '../assets/images/icons/Delete.svg';
-  import SCREENS from '../library/SCREENS';
+  import SCREENS from '../navigation/Screens';
   
   const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
   const StoreProductCard = ({data}) => {

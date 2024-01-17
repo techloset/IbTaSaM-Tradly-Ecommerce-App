@@ -11,7 +11,7 @@ import ratio from '../../styles/ratio';
 import WhiteBtn from '../../(components)/WhiteBtn';
 import BackIcon from '../../assets/images/icons/backIcon.svg';
 import OTPTextView from 'react-native-otp-textinput';
-import SCREENS from '../../library/SCREENS';
+import SCREENS from '../../navigation/Screens';
 
 const {fontPixel, pixelSizeVertical} = ratio;
 

@@ -1,5 +1,5 @@
-import SCREENS from './SCREENS';
-import BottomNavigator from '../navigation/BottomNavigator';
+import SCREENS from './Screens';
+import BottomNavigator from './BottomNavigator';
 import OnBoardingScreen from '../screens/OnBoardingScreen';
 import LoginScreen from '../screens/auth/LoginScreen';
 import SignUpScreen from '../screens/auth/SignUpScreen';
@@ -29,7 +29,7 @@ import ProductDetailScreen from '../screens/ProductDetailScreen';
 import TradlyStore from '../screens/TradlyStore';
 import TradlyStoreSearch from '../screens/TradlyStoreSearch';
 
-const NAVIGATION = [
+const StackNavigation = [
   {
     screenName: SCREENS.ONBOARDING,
     component: OnBoardingScreen,
@@ -148,4 +148,4 @@ const NAVIGATION = [
   },
 ];
 
-export default NAVIGATION;
+export default StackNavigation;

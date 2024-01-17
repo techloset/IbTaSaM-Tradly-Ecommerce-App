@@ -4,7 +4,7 @@ import ratio from '../styles/ratio';
 import {COLOR, FONT_FAMILY, TEXT} from '../styles/GlobalStyles';
 
 import TLogo from '../assets/images/icons/tLogo.svg';
-import SCREENS from '../library/SCREENS';
+import SCREENS from '../navigation/Screens';
 
 const {widthPixel, pixelSizeVertical} = ratio;
 const ProductCard = ({data}) => {

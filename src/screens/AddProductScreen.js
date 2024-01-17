@@ -20,7 +20,7 @@ import AddIcon from '../assets/images/icons/addIconSmall.svg';
 import CrossIcon from '../assets/images/icons/crossCircle.svg';
 import PickIcon from '../assets/images/icons/pick.svg';
 import OptionWithCross from '../(components)/OptionWithCross';
-import SCREENS from '../library/SCREENS';
+import SCREENS from '../navigation/Screens';
 import CommonHeader from '../(components)/CommonHeader';
 
 const AddProductScreen = ({navigation}) => {
@@ -71,8 +71,8 @@ const AddProductScreen = ({navigation}) => {
   const inputFields2 = [
     {
       label: 'Location Details',
-      inputContainerStyle: styles.inputWith_icon_Container,
-      inputStyle: styles.inputWith_icon,
+      inputContainerStyle: styles.inputWithIconContainer,
+      inputStyle: styles.inputWithicon,
       placeholder: 'Kualalumpur, Malaysia',
       iconComponent: <PickIcon />,
     },
@@ -133,10 +133,10 @@ const AddProductScreen = ({navigation}) => {
   };
 
   return (
-    <SafeAreaView style={styles.super_Container}>
+    <SafeAreaView style={styles.superContainer}>
       <StatusBar translucent backgroundColor={'rgba(0,0,0,0)'} />
       <CommonHeader title={'Add Products'} />
-      <View style={styles.container_1}>
+      <View style={styles.container1}>
         <View style={styles.image}>
           <TouchableOpacity style={styles.addPhotoContainer}>
             <AddIcon />
@@ -157,13 +157,13 @@ const AddProductScreen = ({navigation}) => {
           <Text style={styles.faded}>Max. 4 photos per product</Text>
         </View>
       </View>
-      <ScrollView contentContainerStyle={styles.container_2}>
+      <ScrollView contentContainerStyle={styles.container2}>
         {renderProductFields()}
         <View style={styles.inputsRow}>{renderInputFields()}</View>
         {renderInputFields2()}
         {renderProductDetails()}
       </ScrollView>
-      <View style={styles.bottom_Bar}>
+      <View style={styles.bottomBar}>
         <GreenBtn
           text={'Add Products'}
           handleFunc={() => navigation.navigate(SCREENS.MYSTORE_PRODUCTS)}
@@ -176,7 +176,7 @@ const AddProductScreen = ({navigation}) => {
 export default AddProductScreen;
 
 const styles = StyleSheet.create({
-  super_Container: {
+  superContainer: {
     flex: 1,
     backgroundColor: COLOR.bg,
   },
@@ -200,14 +200,14 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     color: COLOR.black,
   },
-  inputWith_icon: {
+  inputWithicon: {
     width: '80%',
     fontSize: fontPixel(16),
     fontFamily: FONT_FAMILY.montserratRegular,
     color: COLOR.black,
     lineHeight: fontPixel(24),
   },
-  inputWith_icon_Container: {
+  inputWithIconContainer: {
     width: widthPixel(335),
     borderBottomWidth: 1,
     borderColor: COLOR.input_clr,
@@ -237,7 +237,7 @@ const styles = StyleSheet.create({
     lineHeight: fontPixel(14),
     opacity: 0.5,
   },
-  container_2: {
+  container2: {
     paddingHorizontal: pixelSizeVertical(23.5),
     gap: pixelSizeVertical(25),
     backgroundColor: COLOR.white,
@@ -299,12 +299,12 @@ const styles = StyleSheet.create({
     gap: pixelSizeVertical(15),
     flexDirection: 'row',
   },
-  container_1: {
+  container1: {
     height: widthPixel(193),
     width: '100%',
     paddingTop: pixelSizeVertical(31),
   },
-  bottom_Bar: {
+  bottomBar: {
     height: widthPixel(80),
     width: '100%',
     justifyContent: 'center',

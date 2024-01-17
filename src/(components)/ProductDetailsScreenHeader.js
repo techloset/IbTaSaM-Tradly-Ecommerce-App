@@ -18,7 +18,7 @@ const ProductDetailsScreenHeader = () => {
         style={styles.iconBg}>
         <BackIcon />
       </TouchableOpacity>
-      <View style={styles.container_2}>
+      <View style={styles.container2}>
         <TouchableOpacity style={styles.iconBg}>
           <ShareIcon />
         </TouchableOpacity>
@@ -36,7 +36,7 @@ const ProductDetailsScreenHeader = () => {
 export default ProductDetailsScreenHeader;
 
 const styles = StyleSheet.create({
-  container_2: {
+  container2: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',

@@ -17,12 +17,12 @@ import BackIcon from '../assets/images/icons/backIcon.svg';
 import SearchIcon from '../assets/images/icons/browseWhite.svg';
 
 const {fontPixel, pixelSizeVertical, pixelSizeHorizontal} = ratio;
-import SCREENS from '../library/SCREENS';
+import SCREENS from '../navigation/Screens';
 import FiltersRow from '../(components)/FiltersRow';
 
 const TradlyStoreSearch = ({navigation}) => {
   return (
-    <SafeAreaView style={styles.super_Container}>
+    <SafeAreaView style={styles.superContainer}>
       <StatusBar translucent backgroundColor={'rgba(0,0,0,0)'} />
       <View style={styles.headerContainer}>
         <View style={styles.headerTextContainer}>
@@ -39,7 +39,7 @@ const TradlyStoreSearch = ({navigation}) => {
         </View>
         <FiltersRow />
       </View>
-      <ScrollView contentContainerStyle={styles.products_Cards}>
+      <ScrollView contentContainerStyle={styles.productsCards}>
         <ProductCard data={BrowseScreenData.slice(0, 2)} />
       </ScrollView>
     </SafeAreaView>
@@ -48,7 +48,7 @@ const TradlyStoreSearch = ({navigation}) => {
 export default TradlyStoreSearch;
 
 const styles = StyleSheet.create({
-  super_Container: {
+  superContainer: {
     flex: 1,
     backgroundColor: COLOR.bg,
   },
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
     color: COLOR.white,
     marginLeft: pixelSizeVertical(15),
   },
-  products_Cards: {
+  productsCards: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     gap: pixelSizeVertical(10),

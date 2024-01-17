@@ -15,7 +15,7 @@ import ProductDetailsScreenHeader from '../(components)/ProductDetailsScreenHead
 import SeeAllBtnGreen from '../(components)/SeeAllBtnGreen';
 
 import GreenBtn from '../(components)/GreenBtn';
-import SCREENS from '../library/SCREENS';
+import SCREENS from '../navigation/Screens';
 
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
@@ -39,7 +39,7 @@ const ProductDetailScreen = ({navigation, route}) => {
   return (
     <SafeAreaView>
       <StatusBar translucent={false} backgroundColor={COLOR.green} />
-      <View style={styles.container_1}>
+      <View style={styles.container1}>
         <FlatList
           data={imgData}
           renderItem={({item, i}) => (

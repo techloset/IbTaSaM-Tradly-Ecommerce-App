@@ -12,13 +12,13 @@ import CommonHeader2 from '../(components)/CommonHeader2';
 import SmallBtn from '../(components)/SmallBtn';
 import StoreBtn from '../(components)/StoreBtn';
 import {useNavigation} from '@react-navigation/native';
-import SCREENS from '../library/SCREENS';
+import SCREENS from '../navigation/Screens';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 const MyStoreScreen = () => {
   const navigation = useNavigation();
   return (
-    <SafeAreaView style={styles.super_Container}>
+    <SafeAreaView style={styles.superContainer}>
       <CommonHeader2 title={'My Store'} />
 
       <View style={styles.container}>
@@ -61,7 +61,7 @@ const MyStoreScreen = () => {
 export default MyStoreScreen;
 
 const styles = StyleSheet.create({
-  super_Container: {
+  superContainer: {
     flex: 1,
     backgroundColor: COLOR.bg,
   },

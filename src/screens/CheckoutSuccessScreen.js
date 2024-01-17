@@ -16,7 +16,7 @@ import ChevDownIcon from '../assets/images/icons/chevDown.svg';
 import DoneIcon from '../assets/images/icons/done.svg';
 import HLineIcon from '../assets/images/icons/h_Line.svg';
 import SortLineIcon from '../assets/images/icons/sortLine.svg';
-import SCREENS from '../library/SCREENS';
+import SCREENS from '../navigation/Screens';
 import CommonHeader from '../(components)/CommonHeader';
 import orderData from '../library/CheckoutSuccessData';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
@@ -28,13 +28,13 @@ const CheckoutSuccessScreen = ({navigation}) => {
       <StatusBar translucent backgroundColor={'rgba(0,0,0,0)'} />
       <CommonHeader title={'My Cart'} />
       <ScrollView>
-        <View style={styles.container_1}>
+        <View style={styles.container1}>
           <DoneIcon />
           <Text style={[TEXT.heading, {color: COLOR.neutral}]}>
             Thanks for Order
           </Text>
         </View>
-        <View style={styles.container_2}>
+        <View style={styles.container2}>
           <View style={styles.itemContainer}>
             <Image
               style={styles.itemimage}
@@ -63,24 +63,24 @@ const CheckoutSuccessScreen = ({navigation}) => {
           </View>
         </View>
         <View style={styles.container}>
-          <View style={styles.track_Head}>
-            <Text style={styles.track_Text}>Track Order</Text>
-            <Text style={styles.track_Text_2}>Order ID - 123455</Text>
+          <View style={styles.trackHead}>
+            <Text style={styles.trackText}>Track Order</Text>
+            <Text style={styles.trackText2}>Order ID - 123455</Text>
             <HLineIcon />
           </View>
           <View style={styles.track}>
             <SortLineIcon />
-            <View style={styles.track_Main}>
+            <View style={styles.trackMain}>
               {checkoutData.map((item, i) => {
                 return (
-                  <View key={i} style={styles.info_Container}>
+                  <View key={i} style={styles.infoContainer}>
                     <View style={{gap: pixelSizeVertical(6)}}>
-                      <Text style={styles.info_Text}>{item.title}</Text>
-                      <Text style={styles.info_Text_Faded}>{item.desc}</Text>
+                      <Text style={styles.infoText}>{item.title}</Text>
+                      <Text style={styles.infoTextFaded}>{item.desc}</Text>
                     </View>
                     <View style={styles.date}>
-                      <Text style={styles.info_Text_Faded}>{item.date}</Text>
-                      <Text style={styles.info_Text_Faded}>{item.time}</Text>
+                      <Text style={styles.infoTextFaded}>{item.date}</Text>
+                      <Text style={styles.infoTextFaded}>{item.time}</Text>
                     </View>
                   </View>
                 );
@@ -88,7 +88,7 @@ const CheckoutSuccessScreen = ({navigation}) => {
             </View>
           </View>
         </View>
-        <View style={styles.container_3}>
+        <View style={styles.container3}>
           <View style={styles.border}>
             <Text style={TEXT.title}>Delivery Address</Text>
           </View>
@@ -105,7 +105,7 @@ const CheckoutSuccessScreen = ({navigation}) => {
         <TouchableOpacity
           onPress={() => navigation.navigate(SCREENS.BOTTOM_NAVIGATOR)}
           style={styles.bottomBtn}>
-          <Text style={styles.bottomBtn_Text}>Back to Home</Text>
+          <Text style={styles.bottomBtnText}>Back to Home</Text>
         </TouchableOpacity>
       </ScrollView>
     </SafeAreaView>
@@ -115,7 +115,7 @@ const CheckoutSuccessScreen = ({navigation}) => {
 export default CheckoutSuccessScreen;
 
 const styles = StyleSheet.create({
-  bottomBtn_Text: {
+  bottomBtnText: {
     fontFamily: FONT_FAMILY.montserratSemiBold,
     fontSize: fontPixel(14),
     lineHeight: fontPixel(20),
@@ -152,25 +152,25 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end',
     gap: pixelSizeVertical(6),
   },
-  info_Text_Faded: {
+  infoTextFaded: {
     fontFamily: FONT_FAMILY.montserratMedium,
     fontSize: fontPixel(10),
     color: COLOR.grey,
     lineHeight: fontPixel(18),
     opacity: 0.5,
   },
-  info_Text: {
+  infoText: {
     fontFamily: FONT_FAMILY.montserratMedium,
     fontSize: fontPixel(14),
     color: COLOR.black,
     lineHeight: fontPixel(18),
   },
-  info_Container: {
+  infoContainer: {
     flexDirection: 'row',
     width: pixelSizeVertical(300),
     justifyContent: 'space-between',
   },
-  track_Main: {
+  trackMain: {
     gap: pixelSizeVertical(30),
   },
   track: {
@@ -180,21 +180,21 @@ const styles = StyleSheet.create({
     gap: pixelSizeVertical(24.35),
     flexDirection: 'row',
   },
-  track_Text_2: {
+  trackText2: {
     fontFamily: FONT_FAMILY.montserratMedium,
     fontSize: fontPixel(14),
     color: COLOR.grey,
     lineHeight: fontPixel(18),
     marginBottom: pixelSizeVertical(13.5),
   },
-  track_Text: {
+  trackText: {
     fontFamily: FONT_FAMILY.montserratSemiBold,
     fontSize: fontPixel(16),
     color: COLOR.black,
     lineHeight: fontPixel(20),
     marginBottom: pixelSizeVertical(7),
   },
-  track_Head: {
+  trackHead: {
     paddingHorizontal: pixelSizeVertical(20),
   },
   container: {
@@ -204,7 +204,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLOR.white,
     paddingTop: pixelSizeVertical(18),
   },
-  container_3: {
+  container3: {
     height: widthPixel(146),
     width: '100%',
     backgroundColor: COLOR.white,
@@ -257,13 +257,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: pixelSizeVertical(15),
   },
-  container_2: {
+  container2: {
     height: widthPixel(150),
     width: '100%',
     backgroundColor: COLOR.white,
     marginBottom: pixelSizeVertical(15),
   },
-  container_1: {
+  container1: {
     height: widthPixel(199),
     width: '100%',
     backgroundColor: COLOR.bg,

@@ -1,4 +1,4 @@
-import SCREENS from './SCREENS';
+import SCREENS from './Screens';
 import HomeScreen from '../screens/HomeScreen';
 import BrowseScreen from '../screens/BrowseScreen';
 import StoreScreen from '../screens/StoreScreen';
@@ -16,7 +16,7 @@ import OrderHistoryScreenIconGreen from '../assets/images/icons/orderGreen.svg';
 import ProfileScreenIcon from '../assets/images/icons/profile.svg';
 import ProfileScreenIconGreen from '../assets/images/icons/profileGreen.svg';
 
-const BOTTOM_NAVIGATION = [
+const BottomNavigation = [
   {
     screenName: SCREENS.HOME,
     component: HomeScreen,
@@ -49,4 +49,4 @@ const BOTTOM_NAVIGATION = [
   },
 ];
 
-export default BOTTOM_NAVIGATION;
+export default BottomNavigation;

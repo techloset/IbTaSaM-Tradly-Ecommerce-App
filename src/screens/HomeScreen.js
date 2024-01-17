@@ -19,6 +19,7 @@ import SeeAllBtnWhite from '../(components)/SeeAllBtnWhite';
 import StoreCard from '../(components)/StoreCard';
 import PopularProducts from '../library/PopularProducts';
 import NewProducts from '../library/NewProducts';
+import SCREENS from '../navigation/Screens';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 const HomeScreen = ({navigation}) => {
@@ -48,7 +49,7 @@ const HomeScreen = ({navigation}) => {
             {HomeMenu.slice(0, 4).map((item, index) => {
               return (
                 <TouchableOpacity
-                  onPress={() => item.onPress(navigation)}
+                  onPress={() => navigation.navigate(item.nextScr)}
                   key={index}>
                   <ImageBackground style={styles.menuImg} source={item.img}>
                     <Text style={styles.menuText}>{item.title}</Text>
@@ -61,7 +62,7 @@ const HomeScreen = ({navigation}) => {
             {HomeMenu.slice(4, 8).map((item, index) => {
               return (
                 <TouchableOpacity
-                  onPress={() => item.onPress(navigation)}
+                  onPress={() => navigation.navigate(item.nextScr)}
                   key={index}>
                   <ImageBackground style={styles.menuImg} source={item.img}>
                     <Text style={styles.menuText}>{item.title}</Text>
@@ -72,7 +73,7 @@ const HomeScreen = ({navigation}) => {
           </View>
         </View>
         <View style={styles.newProduct}>
-          <View style={[styles.row_Just]}>
+          <View style={[styles.rowJust]}>
             <Text style={TEXT.heading_2}>New Product</Text>
             <SeeAllBtnGreen text={'See All'} />
           </View>
@@ -84,7 +85,7 @@ const HomeScreen = ({navigation}) => {
           </ScrollView>
         </View>
         <View style={styles.newProduct}>
-          <View style={[styles.row_Just]}>
+          <View style={[styles.rowJust]}>
             <Text style={TEXT.heading_2}>Popular Product</Text>
             <SeeAllBtnGreen text={'See All'} />
           </View>
@@ -99,7 +100,7 @@ const HomeScreen = ({navigation}) => {
         <ImageBackground
           source={require('../assets/images/storeCardsBg.png')}
           style={styles.storeContainer}>
-          <View style={[styles.row_Just]}>
+          <View style={[styles.rowJust]}>
             <Text style={TEXT.heading_2_white}>Store to follow</Text>
             <SeeAllBtnWhite />
           </View>
@@ -198,7 +199,7 @@ const styles = StyleSheet.create({
   scroll: {
     paddingBottom: pixelSizeVertical(100),
   },
-  row_Just: {
+  rowJust: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',

@@ -11,7 +11,7 @@ import ratio from '../styles/ratio';
 import {COLOR, FONT_FAMILY} from '../styles/GlobalStyles';
 import GreenBtn from '../(components)/GreenBtn';
 import React from 'react';
-import SCREENS from '../library/SCREENS';
+import SCREENS from '../navigation/Screens';
 import CommonHeader from '../(components)/CommonHeader';
 import AddInput from '../(components)/AddInput';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
@@ -77,19 +77,19 @@ const AddCardScreen = ({navigation}) => {
     <SafeAreaView style={styles.container}>
       <StatusBar translucent backgroundColor={'rgba(0,0,0,0)'} />
       <CommonHeader title={'Add Card'} />
-      <View style={styles.container_1}>
+      <View style={styles.container1}>
         <Image
           style={styles.cardImg}
           source={require('../assets/images/mastercard.png')}
         />
       </View>
-      <View style={styles.container_2}>
+      <View style={styles.container2}>
       {renderCardDetails()}       
         <View style={styles.inputsRow}>
         {renderAddressDetails()}
         </View>
       </View>
-      <View style={styles.bottom_Bar}>
+      <View style={styles.bottomBar}>
         <GreenBtn
           text={'Add Credit Card'}
           handleFunc={() => navigation.navigate(SCREENS.PAYMENT_FINAL)}
@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
     lineHeight: fontPixel(14),
     opacity: 0.5,
   },
-  container_2: {
+  container2: {
     paddingHorizontal: pixelSizeVertical(23.5),
     marginTop: pixelSizeVertical(20),
     gap: pixelSizeVertical(25),
@@ -131,7 +131,7 @@ const styles = StyleSheet.create({
     width: widthPixel(309),
     height: widthPixel(183.031),
   },
-  container_1: {
+  container1: {
     height: widthPixel(220),
     width: '100%',
     justifyContent: 'center',
@@ -143,7 +143,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLOR.white,
     flex: 1,
   },
-  bottom_Bar: {
+  bottomBar: {
     height: widthPixel(80),
     width: '100%',
     justifyContent: 'center',

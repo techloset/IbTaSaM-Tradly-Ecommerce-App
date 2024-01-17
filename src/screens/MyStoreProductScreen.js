@@ -17,7 +17,7 @@ const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 import SearchInput from '../(components)/SearchInput';
 import StoreProductCard from '../(components)/StoreProductCard';
 import AddIcon from '../assets/images/icons/addIcon.svg';
-import SCREENS from '../library/SCREENS';
+import SCREENS from '../navigation/Screens';
 
 const MyStoreProductScreen = () => {
   const navigation = useNavigation();
@@ -28,7 +28,7 @@ const MyStoreProductScreen = () => {
     },
   ];
   return (
-    <SafeAreaView style={styles.super_Container}>
+    <SafeAreaView style={styles.superContainer}>
       <CommonHeader2 title={'My Store'} />
       <View style={styles.container}>
         <View style={styles.alphaLogo}>
@@ -51,13 +51,13 @@ const MyStoreProductScreen = () => {
           <Text style={styles.faded}>Remove Store</Text>
         </TouchableOpacity>
       </View>
-      <SafeAreaView style={styles.super_Container}>
-        <View style={styles.container_2}>
+      <SafeAreaView style={styles.superContainer}>
+        <View style={styles.container2}>
           <SearchInput />
           <Text style={[TEXT.title, styles.text1]}>
             You Dont Have a Product
           </Text>
-          <ScrollView contentContainerStyle={styles.container_1}>
+          <ScrollView contentContainerStyle={styles.container1}>
             <StoreProductCard data={cardData} />
             <TouchableOpacity
               onPress={() =>
@@ -85,7 +85,7 @@ const MyStoreProductScreen = () => {
 export default MyStoreProductScreen;
 
 const styles = StyleSheet.create({
-  super_Container: {
+  superContainer: {
     flex: 1,
     backgroundColor: COLOR.bg,
   },
@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: pixelSizeVertical(10),
   },
-  container_1: {
+  container1: {
     flexDirection: 'row',
     gap: pixelSizeVertical(12),
     justifyContent: 'center',
@@ -111,7 +111,7 @@ const styles = StyleSheet.create({
     marginBottom: pixelSizeVertical(16),
     paddingStart: pixelSizeVertical(19),
   },
-  container_2: {
+  container2: {
     paddingTop: pixelSizeVertical(9),
   },
 

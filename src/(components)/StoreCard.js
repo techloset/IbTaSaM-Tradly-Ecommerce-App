@@ -4,7 +4,7 @@ import {COLOR, FONT_FAMILY, TEXT} from '../styles/GlobalStyles';
 
 import SeeAllBtnGreen from './SeeAllBtnGreen';
 import StoreCardData from '../library/StoreCardData';
-import SCREENS from '../library/SCREENS';
+import SCREENS from '../navigation/Screens';
 import {useNavigation} from '@react-navigation/native';
 
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;

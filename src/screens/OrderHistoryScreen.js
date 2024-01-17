@@ -27,7 +27,7 @@ const btnData = [
 
 const OrderHistoryScreen = () => {
   return (
-    <SafeAreaView style={styles.super_Container}>
+    <SafeAreaView style={styles.superContainer}>
       <CommonHeader2 title={'Order History'} />
       <View style={styles.container}>
         <View style={styles.headingContainer}>
@@ -36,20 +36,20 @@ const OrderHistoryScreen = () => {
             <Text style={styles.dateText}>Januari 2020</Text>
           </View>
         </View>
-        <View style={styles.container_1}>
+        <View style={styles.container1}>
           {btnData.map((item, i) => {
             return (
-              <View key={i} style={styles.option_Container}>
+              <View key={i} style={styles.optionContainer}>
                 <View style={styles.left}>
                   <Image
                     style={styles.img}
                     source={require('../assets/images/coke_2.png')}
                   />
-                  <View style={styles.leftText_Container}>
+                  <View style={styles.leftTextContainer}>
                     <Text style={styles.title}>Coca Cola</Text>
                     <View style={styles.priceContainer}>
                       <Text style={styles.price}>$25</Text>
-                      <View style={styles.dis_Container}>
+                      <View style={styles.disContainer}>
                         <Text
                           style={[
                             styles.dis,
@@ -89,7 +89,7 @@ const OrderHistoryScreen = () => {
 export default OrderHistoryScreen;
 
 const styles = StyleSheet.create({
-  super_Container: {
+  superContainer: {
     flex: 1,
     backgroundColor: COLOR.bg,
   },
@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
     color: COLOR.neutral,
     letterSpacing: fontPixel(0.4),
   },
-  dis_Container: {
+  disContainer: {
     flexDirection: 'row',
     opacity: 0.7,
   },
@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: pixelSizeVertical(8),
   },
-  leftText_Container: {
+  leftTextContainer: {
     justifyContent: 'center',
   },
   price: {
@@ -134,7 +134,7 @@ const styles = StyleSheet.create({
     height: pixelSizeVertical(37),
     borderRadius: pixelSizeVertical(5),
   },
-  option_Container: {
+  optionContainer: {
     width: '100%',
     height: pixelSizeVertical(68),
     backgroundColor: COLOR.white,
@@ -145,7 +145,7 @@ const styles = StyleSheet.create({
     paddingEnd: pixelSizeVertical(10),
     justifyContent: 'space-between',
   },
-  container_1: {
+  container1: {
     marginTop: pixelSizeVertical(18),
     gap: pixelSizeVertical(6),
   },

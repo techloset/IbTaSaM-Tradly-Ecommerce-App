@@ -1,7 +1,7 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {COLOR} from '../styles/GlobalStyles';
 import ratio from '../styles/ratio';
-import BOTTOM_NAVIGATION from '../library/BOTTOM_NAVIGATION';
+import BottomNavigation from './BottomNavigation';
 const {widthPixel, pixelSizeVertical} = ratio;
 const Tab = createBottomTabNavigator();
 
@@ -18,7 +18,7 @@ const BottomNavigator = () => {
         },
         tabBarActiveTintColor: COLOR.green,
       }}>
-      {BOTTOM_NAVIGATION.map((item, i) => {
+      {BottomNavigation.map((item, i) => {
         return (
           <Tab.Screen
             key={i}

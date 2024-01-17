@@ -18,7 +18,7 @@ const Beverages = () => {
   return (
     <ScrollView>
       <StatusBar translucent backgroundColor={'rgba(0,0,0,0)'} />
-      <ProductHeader Protitle={'Bread & Bakery'}/>
+      <ProductHeader Protitle={'Beverages'}/>
       <View style={styles.tradlyStoreProduct}>
         {Beverage.map((item, index) => {
           return (
