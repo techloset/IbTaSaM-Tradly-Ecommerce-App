@@ -97,11 +97,9 @@ const CheckoutSuccessScreen = ({navigation}) => {
             <Text style={styles.addressDesc}>
               Flat Number 512, Eden Garden, Rewari
             </Text>
-              <Text style={styles.addressDesc}>
-                Mobile: <Text style={{color: COLOR.black}}>9876543210</Text>
-              </Text>
-            {/* <View>
-            </View> */}
+            <Text style={styles.addressDesc}>
+              Mobile: <Text style={{color: COLOR.black}}>9876543210</Text>
+            </Text>
           </View>
         </View>
         <TouchableOpacity

@@ -4,7 +4,6 @@ import ratio from '../styles/ratio';
 import {COLOR, TEXT} from '../styles/GlobalStyles';
 import {useNavigation} from '@react-navigation/native';
 
-
 import HeartIcon from '../assets/images/icons/heart.svg';
 import CartIcon from '../assets/images/icons/cart.svg';
 import SearchInput from './SearchInput';
@@ -13,14 +12,12 @@ import SCREENS from '../library/SCREENS';
 const {pixelSizeVertical} = ratio;
 
 const HomeHeader = () => {
-    const navigation = useNavigation();
+  const navigation = useNavigation();
 
   return (
     <View style={styles.headerContainer}>
       <View style={styles.headerTextContainer}>
-        {/* <View> */}
-          <Text style={TEXT.heading}>Groceries</Text>
-        {/* </View> */}
+        <Text style={TEXT.heading}>Groceries</Text>
         <View style={styles.headerIconContainer}>
           <TouchableOpacity
             onPress={() => navigation.navigate(SCREENS.WISHLIST)}>

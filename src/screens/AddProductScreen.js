@@ -37,6 +37,101 @@ const AddProductScreen = ({navigation}) => {
       </View>
     ));
   };
+
+  const inputFields = [
+    {
+      label: 'Price',
+      inputStyle: {
+        width: widthPixel(121),
+      },
+      placeholder: '$ 30',
+    },
+    {
+      label: 'Offer Price',
+      inputStyle: {
+        width: widthPixel(121),
+      },
+      placeholder: '$ 15',
+    },
+  ];
+
+  const renderInputFields = () => {
+    return inputFields.map((field, index) => (
+      <View key={index}>
+        <Text style={styles.inputLabel}>{field.label}</Text>
+        <TextInput
+          style={[styles.input, field.inputStyle]}
+          placeholderTextColor={'#333A42'}
+          placeholder={field.placeholder}
+        />
+      </View>
+    ));
+  };
+
+  const inputFields2 = [
+    {
+      label: 'Location Details',
+      inputContainerStyle: styles.inputWith_icon_Container,
+      inputStyle: styles.inputWith_icon,
+      placeholder: 'Kualalumpur, Malaysia',
+      iconComponent: <PickIcon />,
+    },
+    {
+      label: 'Location Details',
+      inputStyle: styles.textarea,
+      placeholder:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus placerat sit fringilla at facilisis. Quam vivamus non orci elit platea id sed est.',
+      isMultiline: true,
+    },
+  ];
+
+  const renderInputFields2 = () => {
+    return inputFields2.map((field, index) => (
+      <View key={index}>
+        <Text style={styles.inputLabel}>{field.label}</Text>
+        {field.iconComponent ? (
+          <View style={field.inputContainerStyle}>
+            <TextInput
+              style={field.inputStyle}
+              placeholderTextColor={'#4F4F4F'}
+              placeholder={field.placeholder}
+            />
+            {field.iconComponent}
+          </View>
+        ) : (
+          <TextInput
+            style={field.inputStyle}
+            placeholderTextColor={'#4F4F4F'}
+            multiline={field.isMultiline}
+            placeholder={field.placeholder}
+          />
+        )}
+      </View>
+    ));
+  };
+  const productDetails = [
+    {label: 'Condition', input: <ProductInput placeholder={'Organic'} />},
+    {label: 'Price Type', input: <ProductInput placeholder={'Fixed'} />},
+    {
+      label: 'Additional Details',
+      input: (
+        <View style={styles.optionInput}>
+          <OptionWithCross text={'Cash on delivery'} />
+          <OptionWithCross text={'Available'} />
+        </View>
+      ),
+    },
+  ];
+
+  const renderProductDetails = () => {
+    return productDetails.map((detail, index) => (
+      <View key={index}>
+        <Text style={styles.inputLabel}>{detail.label}</Text>
+        {detail.input}
+      </View>
+    ));
+  };
+
   return (
     <SafeAreaView style={styles.super_Container}>
       <StatusBar translucent backgroundColor={'rgba(0,0,0,0)'} />
@@ -64,71 +159,9 @@ const AddProductScreen = ({navigation}) => {
       </View>
       <ScrollView contentContainerStyle={styles.container_2}>
         {renderProductFields()}
-        <View style={styles.inputsRow}>
-          <View>
-            <Text style={styles.inputLabel}>Price</Text>
-            <TextInput
-              style={[
-                styles.input,
-                {
-                  width: widthPixel(121),
-                },
-              ]}
-              placeholderTextColor={'#333A42'}
-              placeholder={'$  30'}
-            />
-          </View>
-          <View>
-            <Text style={styles.inputLabel}>Offer Price</Text>
-            <TextInput
-              style={[
-                styles.input,
-                {
-                  width: widthPixel(121),
-                },
-              ]}
-              placeholderTextColor={'#333A42'}
-              placeholder={'$   15'}
-            />
-          </View>
-        </View>
-        <View>
-          <Text style={styles.inputLabel}>Location Details</Text>
-          <View style={styles.inputWith_icon_Container}>
-            <TextInput
-              style={styles.inputWith_icon}
-              placeholderTextColor={'#4F4F4F'}
-              placeholder={'Kualalumpur,Malaysia'}
-            />
-            <PickIcon />
-          </View>
-        </View>
-        <View>
-          <Text style={styles.inputLabel}>Location Details</Text>
-          <TextInput
-            style={styles.textarea}
-            placeholderTextColor={'#4F4F4F'}
-            multiline={true}
-            placeholder={
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus placerat sit fringilla at facilisis. Quam vivamus non orci elit platea id sed est.'
-            }
-          />
-        </View>
-        <View>
-          <Text style={styles.inputLabel}>Condition</Text>
-          <ProductInput placeholder={'Organic'} />
-        </View>
-        <View>
-          <Text style={styles.inputLabel}>Price Type</Text>
-          <ProductInput placeholder={'Fixed'} />
-        </View>
-        <View>
-          <Text style={styles.inputLabel}>Additional Details</Text>
-          <View style={styles.optionInput}>
-            <OptionWithCross text={'Cash on delivery'} />
-            <OptionWithCross text={'Available'} />
-          </View>
-        </View>
+        <View style={styles.inputsRow}>{renderInputFields()}</View>
+        {renderInputFields2()}
+        {renderProductDetails()}
       </ScrollView>
       <View style={styles.bottom_Bar}>
         <GreenBtn

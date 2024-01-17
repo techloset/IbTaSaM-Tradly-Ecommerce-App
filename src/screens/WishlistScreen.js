@@ -7,13 +7,12 @@ import ProductCard from '../(components)/ProductCard';
 const {pixelSizeVertical} = ratio;
 
 const WishlistScreen = () => {
-  const Data = WishlistProducts.slice(0, 4);
   return (
     <SafeAreaView>
       <StatusBar translucent backgroundColor={'rgba(0,0,0,0)'} />
       <CommonHeader title={'Wishlist'} />
       <ScrollView contentContainerStyle={styles.cardsContainer}>
-        <ProductCard data={Data} />
+        <ProductCard data={WishlistProducts.slice(0, 4)} />
       </ScrollView>
     </SafeAreaView>
   );

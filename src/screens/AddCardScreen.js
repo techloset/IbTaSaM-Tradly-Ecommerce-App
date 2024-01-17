@@ -15,7 +15,64 @@ import SCREENS from '../library/SCREENS';
 import CommonHeader from '../(components)/CommonHeader';
 import AddInput from '../(components)/AddInput';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
+
 const AddCardScreen = ({navigation}) => {
+  const cardDetails = [
+    { label: 'Card Number', input: <AddInput placeholder={'5627 2158 9854 8869'} /> },
+    { label: 'Name', input: <AddInput placeholder={'Tradly'} /> },
+  ];
+  
+  const renderCardDetails = () => {
+    return cardDetails.map((detail, index) => (
+      <View key={index}>
+        <Text style={styles.inputLabel}>{detail.label}</Text>
+        {detail.input}
+      </View>
+    ));
+  };
+  
+  const addressDetails = [
+    {
+      label: 'Street address',
+      input: (
+        <TextInput
+          style={[
+            styles.input,
+            {
+              width: widthPixel(197),
+            },
+          ]}
+          placeholderTextColor={'#333A42'}
+          placeholder={'12/08'}
+        />
+      ),
+    },
+    {
+      label: 'City',
+      input: (
+        <TextInput
+          style={[
+            styles.input,
+            {
+              width: widthPixel(83),
+            },
+          ]}
+          placeholderTextColor={'#333A42'}
+          placeholder={'***'}
+        />
+      ),
+    },
+  ];
+  
+  const renderAddressDetails = () => {
+    return addressDetails.map((detail, index) => (
+      <View key={index}>
+        <Text style={styles.inputLabel}>{detail.label}</Text>
+        {detail.input}
+      </View>
+    ));
+  };
+
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar translucent backgroundColor={'rgba(0,0,0,0)'} />
@@ -27,41 +84,9 @@ const AddCardScreen = ({navigation}) => {
         />
       </View>
       <View style={styles.container_2}>
-        <View>
-          <Text style={styles.inputLabel}>Card Number</Text>
-          <AddInput placeholder={'5627 2158 9854 8869'} />
-        </View>
-        <View>
-          <Text style={styles.inputLabel}>Name</Text>
-          <AddInput placeholder={'Tradly'} />
-        </View>
+      {renderCardDetails()}       
         <View style={styles.inputsRow}>
-          <View>
-            <Text style={styles.inputLabel}>Street address</Text>
-            <TextInput
-              style={[
-                styles.input,
-                {
-                  width: widthPixel(197),
-                },
-              ]}
-              placeholderTextColor={'#333A42'}
-              placeholder={'12/08'}
-            />
-          </View>
-          <View>
-            <Text style={styles.inputLabel}>City</Text>
-            <TextInput
-              style={[
-                styles.input,
-                {
-                  width: widthPixel(83),
-                },
-              ]}
-              placeholderTextColor={'#333A42'}
-              placeholder={'***'}
-            />
-          </View>
+        {renderAddressDetails()}
         </View>
       </View>
       <View style={styles.bottom_Bar}>

@@ -17,9 +17,7 @@ const BrowseHeader = () => {
   return (
     <View style={styles.headerContainer}>
       <View style={styles.headerTextContainer}>
-        {/* <View> */}
-          <Text style={TEXT.heading}>Browse</Text>
-        {/* </View> */}
+        <Text style={TEXT.heading}>Browse</Text>
         <View style={styles.headerIconContainer}>
           <TouchableOpacity onPress={() => navigation.navigate(SCREENS.HOME)}>
             <HeartIcon />

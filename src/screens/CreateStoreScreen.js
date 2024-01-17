@@ -34,12 +34,10 @@ const CreateStoreScreen = ({navigation}) => {
             </View>
           );
         })}
-        {/* <View> */}
-          <Text style={styles.inputLabel}>Tagline</Text>
-          <View style={styles.optionInput}>
-            <OptionWithCross text={'Groceries'} />
-          </View>
-        {/* </View> */}
+        <Text style={styles.inputLabel}>Tagline</Text>
+        <View style={styles.optionInput}>
+          <OptionWithCross text={'Groceries'} />
+        </View>
       </ScrollView>
       <View style={styles.bottom_Bar}>
         <GreenBtn

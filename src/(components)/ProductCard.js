@@ -10,10 +10,9 @@ const {widthPixel, pixelSizeVertical} = ratio;
 const ProductCard = ({data}) => {
   const navigation = useNavigation();
 
-  const Data = data;
   return (
     <>
-      {Data.map((item, index) => {
+      {data.map((item, index) => {
         return (
           <TouchableOpacity
             key={index}

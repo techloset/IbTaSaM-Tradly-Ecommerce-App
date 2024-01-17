@@ -13,9 +13,7 @@ const CommonHeader2 = ({title}) => {
   return (
     <View style={styles.headerContainer}>
       <View style={styles.headerTextContainer}>
-        {/* <View> */}
-          <Text style={TEXT.heading}>{title}</Text>
-        {/* </View> */}
+        <Text style={TEXT.heading}>{title}</Text>
         <View style={styles.headerIconContainer}>
           <TouchableOpacity
             onPress={() => navigation.navigate(SCREENS.WISHLIST)}>
