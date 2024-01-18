@@ -62,7 +62,7 @@ const OnBoardingScreen = ({navigation}) => {
         <View style={styles.bottomContainer}>
           {/* <OnboardingPaginator data={Slides} scrollX={scrollX} /> */}
           <View style={{flexDirection: 'row'}}>
-            {Slides.map((_, i) => {
+            {Slides?.map((_, i) => {
               const inputRange = [
                 (i - 1) * SCREEN_WIDTH,
                 i * SCREEN_WIDTH,

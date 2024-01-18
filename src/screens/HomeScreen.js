@@ -46,7 +46,7 @@ const HomeScreen = ({navigation}) => {
         </ScrollView>
         <View style={styles.menuConatiner}>
           <View style={styles.menu}>
-            {HomeMenu.slice(0, 4).map((item, index) => {
+            {HomeMenu.slice(0, 4)?.map((item, index) => {
               return (
                 <TouchableOpacity
                   onPress={() => navigation.navigate(item.nextScr)}
@@ -59,7 +59,7 @@ const HomeScreen = ({navigation}) => {
             })}
           </View>
           <View style={styles.menu}>
-            {HomeMenu.slice(4, 8).map((item, index) => {
+            {HomeMenu.slice(4, 8)?.map((item, index) => {
               return (
                 <TouchableOpacity
                   onPress={() => navigation.navigate(item.nextScr)}

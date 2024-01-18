@@ -11,7 +11,7 @@ const CardRadio = () => {
 
   return (
     <View style={styles.container}>
-      {data.map((item, index) => {
+      {data?.map((item, index) => {
         return (
           <TouchableOpacity
             key={index}

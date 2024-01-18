@@ -55,7 +55,7 @@ const ProductDetailScreen = ({navigation, route}) => {
         </View>
         <View style={styles.indicator}>
           <View style={{flexDirection: 'row'}}>
-            {imgData.map((_, i) => {
+            {imgData?.map((_, i) => {
               return (
                 <View
                   style={

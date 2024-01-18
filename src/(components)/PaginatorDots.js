@@ -8,7 +8,7 @@ const {widthPixel} = ratio;
 const Paginator_Dots = ({data, currentIndex}) => {
   return (
     <View style={{flexDirection: 'row'}}>
-      {data.map((_, i) => {
+      {data?.map((_, i) => {
         return (
           <View
             style={

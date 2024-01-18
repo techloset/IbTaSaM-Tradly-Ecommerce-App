@@ -71,7 +71,7 @@ const CheckoutSuccessScreen = ({navigation}) => {
           <View style={styles.track}>
             <SortLineIcon />
             <View style={styles.trackMain}>
-              {checkoutData.map((item, i) => {
+              {checkoutData?.map((item, i) => {
                 return (
                   <View key={i} style={styles.infoContainer}>
                     <View style={{gap: pixelSizeVertical(6)}}>

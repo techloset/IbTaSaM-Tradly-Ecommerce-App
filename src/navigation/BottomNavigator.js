@@ -18,7 +18,7 @@ const BottomNavigator = () => {
         },
         tabBarActiveTintColor: COLOR.green,
       }}>
-      {BottomNavigation.map((item, i) => {
+      {BottomNavigation?.map((item, i) => {
         return (
           <Tab.Screen
             key={i}

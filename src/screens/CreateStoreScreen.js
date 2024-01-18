@@ -26,7 +26,7 @@ const CreateStoreScreen = ({navigation}) => {
         </Text>
       </View>
       <ScrollView contentContainerStyle={styles.scroll}>
-        {inputsData.map((item, index) => {
+        {inputsData?.map((item, index) => {
           return (
             <View key={index}>
               <Text style={styles.inputLabel}>{item.inputLabel}</Text>

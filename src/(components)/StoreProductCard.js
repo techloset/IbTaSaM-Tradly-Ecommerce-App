@@ -21,7 +21,7 @@ import {
     const MapData = data;
     return (
       <>
-        {MapData.map((item, index) => {
+        {MapData?.map((item, index) => {
           return (
             <View key={index} style={styles.container}>
               <ImageBackground style={styles.img} source={item.img}>

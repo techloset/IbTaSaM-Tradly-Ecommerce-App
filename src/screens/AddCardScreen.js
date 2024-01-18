@@ -23,7 +23,7 @@ const AddCardScreen = ({navigation}) => {
   ];
   
   const renderCardDetails = () => {
-    return cardDetails.map((detail, index) => (
+    return cardDetails?.map((detail, index) => (
       <View key={index}>
         <Text style={styles.inputLabel}>{detail.label}</Text>
         {detail.input}
@@ -65,7 +65,7 @@ const AddCardScreen = ({navigation}) => {
   ];
   
   const renderAddressDetails = () => {
-    return addressDetails.map((detail, index) => (
+    return addressDetails?.map((detail, index) => (
       <View key={index}>
         <Text style={styles.inputLabel}>{detail.label}</Text>
         {detail.input}

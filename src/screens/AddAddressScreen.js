@@ -20,7 +20,7 @@ const AddAddressScreen = ({navigation}) => {
   ];
 
   const renderInputFields = () => {
-    return inputFields.map((field, index) => (
+    return inputFields?.map((field, index) => (
       <View key={index}>
         <Text style={styles.inputLabel}>{field.label}</Text>
         <AddInput placeholder={field.placeholder} />

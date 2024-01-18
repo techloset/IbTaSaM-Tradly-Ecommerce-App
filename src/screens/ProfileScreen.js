@@ -37,7 +37,7 @@ const ProfileScreen = () => {
         </View>
       </View>
       <View style={styles.container1}>
-        {ProfileScreenData.map((item, index) => {
+        {ProfileScreenData?.map((item, index) => {
           return (
             <TouchableOpacity
               onPress={item.nav}

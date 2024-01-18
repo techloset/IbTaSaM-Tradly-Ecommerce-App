@@ -20,7 +20,7 @@ const HomeCare = () => {
       <StatusBar translucent backgroundColor={'rgba(0,0,0,0)'} />
       <ProductHeader Protitle={'Home Care'} />
       <View style={styles.tradlyStoreProduct}>
-        {HomeCares.map((item, index) => {
+        {HomeCares?.map((item, index) => {
           return (
             <View key={index} style={styles.container}>
               <Image

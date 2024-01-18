@@ -30,7 +30,7 @@ const AddProductScreen = ({navigation}) => {
   ];
 
   const renderProductFields = () => {
-    return productFields.map((field, index) => (
+    return productFields?.map((field, index) => (
       <View key={index}>
         <Text style={styles.inputLabel}>{field.label}</Text>
         <ProductInput placeholder={field.placeholder} />
@@ -56,7 +56,7 @@ const AddProductScreen = ({navigation}) => {
   ];
 
   const renderInputFields = () => {
-    return inputFields.map((field, index) => (
+    return inputFields?.map((field, index) => (
       <View key={index}>
         <Text style={styles.inputLabel}>{field.label}</Text>
         <TextInput
@@ -86,7 +86,7 @@ const AddProductScreen = ({navigation}) => {
   ];
 
   const renderInputFields2 = () => {
-    return inputFields2.map((field, index) => (
+    return inputFields2?.map((field, index) => (
       <View key={index}>
         <Text style={styles.inputLabel}>{field.label}</Text>
         {field.iconComponent ? (
@@ -124,7 +124,7 @@ const AddProductScreen = ({navigation}) => {
   ];
 
   const renderProductDetails = () => {
-    return productDetails.map((detail, index) => (
+    return productDetails?.map((detail, index) => (
       <View key={index}>
         <Text style={styles.inputLabel}>{detail.label}</Text>
         {detail.input}

@@ -20,7 +20,7 @@ const Egg = () => {
       <StatusBar translucent backgroundColor={'rgba(0,0,0,0)'} />
       <ProductHeader Protitle={'Egg'} />
       <View style={styles.tradlyStoreProduct}>
-        {Eggs.map((item, index) => {
+        {Eggs?.map((item, index) => {
           return (
             <View key={index} style={styles.container}>
               <Image

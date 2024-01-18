@@ -73,7 +73,7 @@ const TradlyStore = () => {
           morbi eu amet id mauris. Eget at ut.
         </Text>
         <View style={styles.optionsContainer}>
-          {crossOptions.map((item, i) => {
+          {crossOptions?.map((item, i) => {
             return (
               <TouchableOpacity style={styles.option} key={i}>
                 <Text style={styles.optionText}>{item.text}</Text>
@@ -100,7 +100,7 @@ const TradlyStore = () => {
           horizontal
           showsHorizontalScrollIndicator={false}
           contentContainerStyle={styles.btnScroll}>
-          {btnText.map((item, i) => {
+          {btnText?.map((item, i) => {
             return (
               <TouchableOpacity
                 key={i}

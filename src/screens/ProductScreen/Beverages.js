@@ -20,7 +20,7 @@ const Beverages = () => {
       <StatusBar translucent backgroundColor={'rgba(0,0,0,0)'} />
       <ProductHeader Protitle={'Beverages'}/>
       <View style={styles.tradlyStoreProduct}>
-        {Beverage.map((item, index) => {
+        {Beverage?.map((item, index) => {
           return (
             <View key={index} style={styles.container}>
               <Image

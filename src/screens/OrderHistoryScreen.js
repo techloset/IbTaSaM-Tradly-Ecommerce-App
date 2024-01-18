@@ -37,7 +37,7 @@ const OrderHistoryScreen = () => {
           </View>
         </View>
         <View style={styles.container1}>
-          {btnData.map((item, i) => {
+          {btnData?.map((item, i) => {
             return (
               <View key={i} style={styles.optionContainer}>
                 <View style={styles.left}>

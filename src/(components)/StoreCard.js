@@ -13,7 +13,7 @@ const StoreCard = () => {
   const CardData = StoreCardData;
   return (
     <>
-      {CardData.map((item, index) => {
+      {CardData?.map((item, index) => {
         return (
           <TouchableOpacity
             key={index}

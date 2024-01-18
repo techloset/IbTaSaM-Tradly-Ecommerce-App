@@ -9,7 +9,7 @@ const StackNavigator = () => {
     <Stack.Navigator
       initialRouteName={SCREENS.ONBOARDING}
       screenOptions={{headerShown: false}}>
-      {StackNavigation.map((item, index) => {
+      {StackNavigation?.map((item, index) => {
         return (
           <Stack.Screen
             key={index}

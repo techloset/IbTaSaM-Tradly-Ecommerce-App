@@ -12,7 +12,7 @@ const ProductCard = ({data}) => {
 
   return (
     <>
-      {data.map((item, index) => {
+      {data?.map((item, index) => {
         return (
           <TouchableOpacity
             key={index}
